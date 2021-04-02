@@ -32,6 +32,7 @@ public class UserController {
                     user.setAge(Objects.isNull(request.getAge()) ? user.getAge() : request.getAge());
                     user.setEmail(Objects.isNull(request.getEmail()) ? user.getEmail() : request.getEmail());
                     user.setCompany(Objects.isNull(request.getCompany()) ? user.getCompany() : request.getCompany());
+                    user.setSex(Objects.isNull(request.getSex()) ? user.getSex() : request.getSex());
                     return userRepository.save(user);
                 })
                 .orElseGet(() -> {
