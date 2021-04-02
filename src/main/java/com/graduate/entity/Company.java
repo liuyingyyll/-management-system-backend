@@ -17,7 +17,7 @@ import javax.persistence.Id;
 @AllArgsConstructor
 public class Company {
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Integer companyId;
     @NotNull
     private String companyName;
