@@ -25,7 +25,7 @@ public class CompanyController {
         return companyRepository.save(request);
     }
 
-    @PutMapping(path="/edit/{companyId}")
+    @PutMapping(path="/add")
     public @ResponseBody Company editCompany (@PathVariable final Integer companyId,
                                                 @Validated @RequestBody final Company request) {
         return companyRepository.findById(companyId)
